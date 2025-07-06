@@ -1,0 +1,103 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s;
+}
+.container {
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.18);
+  text-align: center;
+  width: 350px;
+  padding: 2rem 3rem;
+}
+h1 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+input {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255,255,255,0.3);
+  color: #222;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+input:focus {
+  box-shadow: 0 0 0 2px #2a5298;
+  background: rgba(255,255,255,0.5);
+}
+button {
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(42,82,152,0.15);
+}
+button:hover, button:focus {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+#weatherCard {
+  background: rgba(255,255,255,0.25);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: opacity 0.3s, background 0.5s;
+  animation: fadeIn 0.7s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+#weatherIcon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+#weatherInfo h2 {
+  margin: 0.5rem 0 0.2rem 0;
+  color: #1e3c72;
+}
+#weatherInfo p {
+  margin: 0.2rem 0;
+  color: #222;
+  font-size: 1.05rem;
+}
+.error {
+  color: #ff4d4f;
+  margin-top: 1rem;
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 95vw;
+    padding: 1rem 0.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+} 
